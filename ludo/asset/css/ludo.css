@@ -1,0 +1,78 @@
+.outer{
+	/*position: absolute;*/ 
+	width: 602px;
+	height: 602px;
+}
+.restPlace{
+	width: 240px;
+	height: 240px;
+}
+.insideRestPlace{
+	position: relative;
+	top: 28px;
+	width: 180px;
+	height: 180px;
+}
+.pathVertical{
+	width: 120px;
+	height: 240px;
+}
+.pathHorizontal{
+	width: 240px;
+	height: 120px;
+}
+.finish{
+	width: 120px;
+	height: 120px;
+}
+.rbpath {
+    width: 40px;
+    height: 40px;
+    position: relative;
+}
+.row.w-100.h-50 {
+    position: relative;
+    left: 15px;
+}
+.roundPiece{
+    height: 30px;
+    width: 25px;
+    position: relative;
+    margin: 0 auto;
+    top: 31px;
+}
+.newroundPiece{
+	height: 30px;
+	width: 25px;
+	position: absolute;
+	margin: 0 auto;
+	left: calc(50% - 16px);
+	top: calc(50% - 17px);
+}
+#block2, #block8, #block9, #block10, #block11, #block12{
+	background-color: #007BFF;
+}
+#block42, #block41, #block44, #block47, #block50, #block53{
+	background-color: #28A745;
+}
+#block67, #block68, #block65, #block62, #block59, #block56{
+	background-color: #DC3545;
+}
+#block35, #block29, #block28, #block27, #block26, #block25{
+	background-color: #FFC107;
+}
+i{
+	position: relative;
+    top: 8px;
+    left: 12px;
+}
+.addBorder{
+	 border: solid black !important;
+}
+.mystar div{
+	top: -20px
+}
+#block2, #block15, #block67, #block42, #block35, #block43, #block22, #block66{
+	background:url(../images/star.png) no-repeat;
+	background-size: cover;
+}
