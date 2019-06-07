@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ludo</title>
+	<script type="text/javascript" src="../asset/js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="../asset/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../asset/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../asset/css/ludo.css">
+	<link rel="stylesheet" href="../asset/fontawesome-free-5.7.2-web/css/all.css">
+	<style type="text/css">
+		
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="wraper">
+			<div id="dice" onclick="randomNum()" style="background-image:url(../asset/images/dice.gif);background-size:contain; width:150px;height:150px; float:left;"></div>
+			<h3 id="player" style="float:left; color:red">red</h3>
+			<div class="border outer mx-auto">
+				<div class="float-left border bg-primary restPlace">
+					<div class="mx-auto bg-white rounded  insideRestPlace" id="player3">
+						<div class="row w-100 h-50">
+							<div class="col-6 border-right" id="parentbluepawn1">
+								<div class="border rounded-circle p-3 bg-primary roundPiece" id="bluepawn1" onclick="movePawn('blue',1)"></div>
+							</div>
+							<div class="col-6" id="parentbluepawn2">
+								<div class="border rounded-circle p-3 bg-primary roundPiece" id="bluepawn2" onclick="movePawn('blue',2)"></div>
+							</div>
+						</div>
+						<div class="row w-100 h-50 border-top">
+							<div class="col-6 border-right" id="parentbluepawn3">
+								<div class="border rounded-circle p-3 bg-primary roundPiece" id="bluepawn3" onclick="movePawn('blue',3)"></div>
+							</div>
+							<div class="col-6" id="parentbluepawn4">
+								<div class="border rounded-circle p-3 bg-primary roundPiece" id="bluepawn4" onclick="movePawn('blue',4)"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="float-left pathVertical" id="bgpath"></div>
+				<div class="float-left border bg-success restPlace">
+					<div class="mx-auto bg-white rounded  insideRestPlace" id="player3">
+						<div class="row w-100 h-50">
+							<div class="col-6 border-right" id="parentgreenpawn1">
+								<div class="border rounded-circle p-3 bg-success roundPiece" id="greenpawn1"onclick="movePawn('green',1)"></div>
+							</div>
+							<div class="col-6" id="parentgreenpawn2">
+								<div class="border rounded-circle p-3 bg-success roundPiece" id="greenpawn2" onclick="movePawn('green',2)"></div>
+							</div>
+						</div>
+						<div class="row w-100 h-50 border-top">
+							<div class="col-6 border-right" id="parentgreenpawn3">
+								<div class="border rounded-circle p-3 bg-success roundPiece" id="greenpawn3" onclick="movePawn('green',3)"></div>
+							</div>
+							<div class="col-6" id="parentgreenpawn4">
+								<div class="border rounded-circle p-3 bg-success roundPiece" id="greenpawn4" onclick="movePawn('green',4)"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+				<div class="float-left pathHorizontal" id="brpath"></div>
+				<div class="float-left border finish">end</div>
+				<div class="float-left pathHorizontal" id="gypath"></div>
+				<div class="clearfix"></div>
+				<div class="float-left border bg-danger restPlace">
+					<div class="mx-auto bg-white rounded  insideRestPlace" id="player1">
+						<div class="row w-100 h-50">
+							<div class="col-6 border-right" id="parentredpawn1">
+								<div class="border rounded-circle p-3 bg-danger roundPiece redcoins" id="redpawn1" onclick="movePawn('red',1)"></div>
+							</div>
+							<div class="col-6" id="parentredpawn2">
+								<div class="border rounded-circle p-3 bg-danger roundPiece redcoins" id="redpawn2" onclick="movePawn('red',2)"></div>
+							</div>
+						</div>
+						<div class="row w-100 h-50 border-top">
+							<div class="col-6 border-right" id="parentredpawn3">
+								<div class="border rounded-circle p-3 bg-danger roundPiece redcoins" id="redpawn3" onclick="movePawn('red',3)"></div>
+							</div>
+							<div class="col-6" id="parentredpawn4">
+								<div class="border rounded-circle p-3 bg-danger roundPiece redcoins" id="redpawn4" onclick="movePawn('red',4)"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="float-left pathVertical" id="rypath"></div>
+				<div class="float-left border bg-warning restPlace">
+					<div class="mx-auto bg-white rounded  insideRestPlace" id="player2">
+						<div class="row w-100 h-50">
+							<div class="col-6 border-right" id="parentyellowpawn1">
+								<div class="border rounded-circle p-3 bg-warning roundPiece" id="yellowpawn1" onclick="movePawn('yellow',1)"></div>
+							</div>
+							<div class="col-6" id="parentyellowpawn2">
+								<div class="border rounded-circle p-3 bg-warning roundPiece" id="yellowpawn2" onclick="movePawn('yellow',2)"></div>
+							</div>
+						</div>
+						<div class="row w-100 h-50 border-top">
+							<div class="col-6 border-right" id="parentyellowpawn3">
+								<div class="border rounded-circle p-3 bg-warning roundPiece " id="yellowpawn3" onclick="movePawn('yellow',3)"></div>
+							</div>
+							<div class="col-6" id="parentyellowpawn4">
+								<div class="border rounded-circle p-3 bg-warning roundPiece" id="yellowpawn4" onclick="movePawn('yellow',4)"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="../asset/js/ludo.js">
+</script>
+</html>
